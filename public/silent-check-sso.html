@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Silent Check SSO</title>
+  <script src="%PUBLIC_URL%/keycloak.js"></script>
+  <script>
+    const keycloak = Keycloak();
+    keycloak.init({ onLoad: 'check-sso', silentCheckSsoRedirectUri: window.location.origin + '/silent-check-sso.html' });
+  </script>
+</head>
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+</body>
+</html>

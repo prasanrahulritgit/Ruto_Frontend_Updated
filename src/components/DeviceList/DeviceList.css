@@ -214,3 +214,68 @@ body.light .device-sort select:hover {
 .reset-sort-btn:hover {
   background-color: #e65c00;
 }
+
+/* Tab navigation container */
+.tab-navigation {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Individual tab button */
+.devicelist-tab {
+  padding: 0.6rem 1.5rem;
+  background-color: #1e1e1e;
+  color: #1281d6;
+  border: 2px solid #2a2a2a;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.devicelist-tab:hover {
+  border-color: #ff6a00;
+  background-color: #2a2a2a;
+}
+
+/* Active tab should be orange */
+.active-tab {
+  background-color: #ff6a00;
+  color: white;
+  border-color: #ff6a00;
+}
+
+/* Light theme tab styles */
+body.light .devicelist-tab {
+  background-color: #ffffff;
+  color: #007acc;
+  border: 2px solid #ccc;
+}
+
+body.light .devicelist-tab:hover {
+  background-color: #f0f0f0;
+  border-color: #e65c00;
+}
+
+body.light .active-tab {
+  background-color: #ff6a00;
+  color: white;
+  border-color: #ff6a00;
+}
+
+
+/* Admin placeholder content */
+.admin-placeholder {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #cccccc;
+  padding: 4rem;
+}
+
+body.light .admin-placeholder {
+  color: #444;
+}

@@ -12,8 +12,7 @@ import Navbar from './components/Navbar/Navbar';
 import DeviceList from './components/DeviceList/DeviceList';
 import VideoStream from './pages/VideoStream/VideoStream';
 import Audio from './pages/Audio/Audio';
-import Thermal from './pages/Thermal/Thermal';
-import Camera from './pages/Camera/Camera';
+import ThermoCam from './pages/ThermoCam/ThermoCam';
 import LoginSignupPage from './components/Auth/LoginSignupPage';
 import Settings from './pages/Settings/Settings';
 import Debugger from './pages/Debugger/Debugger';
@@ -27,10 +26,10 @@ function LayoutWithSidebar() {
         <Navbar />
         <div style={{ padding: '1rem', flex: 1, overflowY: 'auto' }}>
           <Routes>
+           
             <Route path="/videostream" element={<VideoStream />} />
             <Route path="/audio"       element={<Audio />} />
-            <Route path="/thermal"     element={<Thermal />} />
-            <Route path="/camera"      element={<Camera />} />
+            <Route path="/thermocam"   element={<ThermoCam />} />
             <Route path="/debugger"      element={<Debugger />} />
             <Route path="/settings"    element={<Settings />} />
             <Route path="/UsbIp"    element={<UsbIp />} />
@@ -63,10 +62,10 @@ function AppRoutes({ isAuthenticated, setIsAuthenticated }) {
   }
 
   // Root device list
-  if (path === '/') {
+  if (path === '/devicelist') {
     return (
       <Routes>
-        <Route path="/" element={<DeviceList />} />
+        <Route path="/devicelist" element={<DeviceList />} />
       </Routes>
     );
   }
@@ -80,6 +79,7 @@ export default function App() {
 
   return (
     <Router>
+      
       <AppRoutes
         isAuthenticated={isAuthenticated}
         setIsAuthenticated={setIsAuthenticated}

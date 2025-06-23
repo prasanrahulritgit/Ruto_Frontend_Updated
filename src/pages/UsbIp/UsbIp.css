@@ -108,7 +108,7 @@
 .theme-label {
   cursor: pointer;
   width: 50px;
-  height: 20px;
+  height: 30px;
   background: #333;
   display: flex;
   align-items: center;
@@ -166,9 +166,6 @@ body.light .card:hover {
     border-color: #ff6a00;
 }
  
-body.light .fpga-card {
-  background: var(--bg-card);
-}
  
  
 .fpga-card {
@@ -179,6 +176,7 @@ body.light .fpga-card {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   transition: transform 0.2s, border-color 0.2s;
   gap: 2rem;
+  background-color: #121212;
 }
  
 .fpga-card:hover {
@@ -213,15 +211,6 @@ body.light .connect-btn:hover {
 }
  
 /* Logo */
-.logo {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 1000;
-  max-width: 300px;
-  height: auto;
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
-}
  
 /* Responsive container */
 .container {
